@@ -1,24 +1,25 @@
 <template>
 	<div id="main" :class="isDay ? 'day' : 'night'">
     	<div class="gradient-effect">
-			<div class="form-section container mt-5">
-				<h1 class="title text-center text-heading">Weather in</h1>
-				<form class="search-location" v-on:submit.prevent="getWeather">
-					<input
-					type="text"
-					class="form-control text-muted search-box form-rounded p-3 shadow-sm"
-					placeholder="What City?"
-					v-model="citySearch"
-					autocomplete="off"
-					/>
-				</form>
+			<div class="form-section container mt-5" style="text-align:center">
+				<h1 class="title text-heading">Weather Application</h1>
+				
 			</div>
 			
       		<p class="text-center my-3 text-danger" v-if="cityFound">No city found</p>
 
       		<div class="container"> 
 				  <div class="row">
-						<div class="col-4 col-sm-4">
+						<div class="col-4 col-sm-4 mt-3">
+							<form class="search-location" v-on:submit.prevent="getWeather">
+								<input
+									type="text"
+									class="form-control text-muted search-box form-rounded p-3 shadow-sm"
+									placeholder="Enter a city"
+									v-model="citySearch"
+									autocomplete="off"
+								/>
+							</form>
 							<div class="card rounded my-3 shadow-lg back-card overflow-hidden">
 
 								<!-- weather animation container -->
@@ -170,10 +171,6 @@ export default {
         const mainWeather = data.weather[0].main;
         const timeOfDay = data.weather[0].icon;
 
-		console.log(timeOfDay);
-				
-		console.log(mainWeather);
-
         this.ll = data.coord.lat+','+data.coord.lon;
 
 		// fetch nearby places information
@@ -273,10 +270,9 @@ export default {
 };
 </script>
 
-
 <style>
+
 @import "../../css/app.css";
 @import "../../css/animation.css";
-
 
 </style>

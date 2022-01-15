@@ -46,7 +46,7 @@
     }
   }
 
-  @media only screen and (max-width: 1080px) {
+  @media only screen and (max-width: 1200px) {
     /* Medium devices (landscape tablets, 768px and up) */
     [class*="col-"] {
       width: 100%;

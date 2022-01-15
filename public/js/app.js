@@ -5453,6 +5453,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
@@ -5506,19 +5507,17 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 data = _context.sent;
                 mainWeather = data.weather[0].main;
                 timeOfDay = data.weather[0].icon;
-                console.log(timeOfDay);
-                console.log(mainWeather);
                 this.ll = data.coord.lat + ',' + data.coord.lon; // fetch nearby places information
 
-                _context.next = 16;
+                _context.next = 14;
                 return fetch(fourSquareURL + this.ll);
 
-              case 16:
+              case 14:
                 fourSquareResponse = _context.sent;
-                _context.next = 19;
+                _context.next = 17;
                 return fourSquareResponse.json();
 
-              case 19:
+              case 17:
                 this.nearbyData = _context.sent;
                 this.citySearch = "";
                 this.setParams(data);
@@ -5526,22 +5525,22 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 this.weatherAnimation(mainWeather);
                 this.visible = true;
                 this.cityFound = false;
-                _context.next = 33;
+                _context.next = 31;
                 break;
 
-              case 28:
-                _context.prev = 28;
+              case 26:
+                _context.prev = 26;
                 _context.t0 = _context["catch"](2);
                 console.log(_context.t0);
                 this.cityFound = true;
                 this.visible = false;
 
-              case 33:
+              case 31:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, this, [[2, 28]]);
+        }, _callee, this, [[2, 26]]);
       }));
 
       function getWeather() {
@@ -10778,7 +10777,7 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 ___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_css_app_css__WEBPACK_IMPORTED_MODULE_1__["default"]);
 ___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_css_animation_css__WEBPACK_IMPORTED_MODULE_2__["default"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n\n\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -10835,7 +10834,7 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default()(_assets_day_bg_desktop_jpg__WEBPACK_IMPORTED_MODULE_2__["default"]);
 var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default()(_assets_night_bg_desktop_jpg__WEBPACK_IMPORTED_MODULE_3__["default"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "#main {\r\n    position: absolute;\r\n    height: 100%;\r\n    width: 100%;\r\n  }\r\n  .day {\r\n    /* background: linear-gradient(to bottom left, #6ebcff, #ffffff); */\r\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\r\n    background-size: cover;\r\n    background-position: bottom;\r\n    transition: 0.4s;\r\n  }\r\n\r\n  .night {\r\n    /* background: linear-gradient(to bottom left, #ef86cc, #3d3d3d); */\r\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ");\r\n    background-size: cover;\r\n    background-position: bottom;\r\n    transition: 0.4s;\r\n    color: white;\r\n  }\r\n\r\n  .gradient-effect {\r\n    position: absolute;\r\n    height: 100%;\r\n    width: 100%;\r\n\r\n    /* Chrome 10-25, Safari 5.1-6 */\r\n    background: -webkit-linear-gradient(to right, rgba(102, 126, 234, 0.45), rgba(38 63 102 / 45%));\r\n\r\n    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */\r\n    background: linear-gradient(to right, rgba(102, 126, 234, 0.45), rgba(38 63 102 / 45%))\r\n  }\r\n\r\n  @media only screen and (max-width: 600px) {\r\n /* Small devices (portrait tablets and large phones, 600px and up) */\r\n    [class*=\"col-\"] {\r\n      width: 100%;\r\n    }\r\n  }\r\n\r\n  @media only screen and (max-width: 768px) {\r\n    /* Medium devices (landscape tablets, 768px and up) */\r\n    [class*=\"col-\"] {\r\n      width: 100%;\r\n    }\r\n  }\r\n\r\n  @media only screen and (max-width: 1080px) {\r\n    /* Medium devices (landscape tablets, 768px and up) */\r\n    [class*=\"col-\"] {\r\n      width: 100%;\r\n    }\r\n  }\r\n  \r\n  \r\n  .title {\r\n    font-size: 50px;\r\n    font-weight: 500;\r\n  }\r\n  \r\n  .form-rounded {\r\n    border-radius: 1.6rem;\r\n  }\r\n  .back-card {\r\n    border-radius: 40px !important;\r\n    color: white;\r\n    background: linear-gradient(to bottom right, #707070, #434647);\r\n    text-shadow: 2px 2px 2px #707070;\r\n  }\r\n\r\n  .search-box {\r\n      background-color: rgba(255,255,255, 0.5);\r\n      transition: 0.4s;\r\n  }\r\n\r\n  .card-body {\r\n      z-index: 100 !important;\r\n  }\r\n  \r\n  .city-name {\r\n    position: absolute;\r\n    width: 100%;\r\n  }\r\n  \r\n  .city-name p {\r\n    font-weight: 400;\r\n    font-size: 16pt;\r\n  }\r\n  \r\n  .city-name span {\r\n    position: relative;\r\n    top: -50px;\r\n    font-size: 40pt;\r\n    font-family: \"Times New Roman\", Times, serif;\r\n  }\r\n  \r\n  .temp span {\r\n    font-weight: 100;\r\n    font-size: 5em;\r\n    letter-spacing: -5px;\r\n    white-space: nowrap;\r\n  }\r\n  .card-mid {\r\n    line-height: 0.5;\r\n  }\r\n  .condition {\r\n    font-size: 1em;\r\n    font-weight: 700;\r\n    line-height: 1em;\r\n    text-transform: capitalize;\r\n  }\r\n  \r\n  .high {\r\n    font-size: 15px;\r\n  }\r\n  \r\n  .low {\r\n    font-size: 15px;\r\n  }\r\n  \r\n  .card-bottom p {\r\n    font-size: 40px;\r\n    font-weight: 100;\r\n    letter-spacing: -3px;\r\n  }\r\n  .card-bottom {\r\n    line-height: 0.5;\r\n  }\r\n  \r\n  .card-bottom span {\r\n    font-size: 12px;\r\n  }\r\n  \r\n  .form-control:focus {\r\n    box-shadow: none;\r\n    border-color: inherit;\r\n  }\r\n\r\n  .text-heading {\r\n      color: white;\r\n      text-shadow: 2px 2px #818181;\r\n  }", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "#main {\r\n    position: absolute;\r\n    height: 100%;\r\n    width: 100%;\r\n  }\r\n  .day {\r\n    /* background: linear-gradient(to bottom left, #6ebcff, #ffffff); */\r\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\r\n    background-size: cover;\r\n    background-position: bottom;\r\n    transition: 0.4s;\r\n  }\r\n\r\n  .night {\r\n    /* background: linear-gradient(to bottom left, #ef86cc, #3d3d3d); */\r\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ");\r\n    background-size: cover;\r\n    background-position: bottom;\r\n    transition: 0.4s;\r\n    color: white;\r\n  }\r\n\r\n  .gradient-effect {\r\n    position: absolute;\r\n    height: 100%;\r\n    width: 100%;\r\n\r\n    /* Chrome 10-25, Safari 5.1-6 */\r\n    background: -webkit-linear-gradient(to right, rgba(102, 126, 234, 0.45), rgba(38 63 102 / 45%));\r\n\r\n    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */\r\n    background: linear-gradient(to right, rgba(102, 126, 234, 0.45), rgba(38 63 102 / 45%))\r\n  }\r\n\r\n  @media only screen and (max-width: 600px) {\r\n /* Small devices (portrait tablets and large phones, 600px and up) */\r\n    [class*=\"col-\"] {\r\n      width: 100%;\r\n    }\r\n  }\r\n\r\n  @media only screen and (max-width: 768px) {\r\n    /* Medium devices (landscape tablets, 768px and up) */\r\n    [class*=\"col-\"] {\r\n      width: 100%;\r\n    }\r\n  }\r\n\r\n  @media only screen and (max-width: 1200px) {\r\n    /* Medium devices (landscape tablets, 768px and up) */\r\n    [class*=\"col-\"] {\r\n      width: 100%;\r\n    }\r\n  }\r\n  \r\n  \r\n  .title {\r\n    font-size: 50px;\r\n    font-weight: 500;\r\n  }\r\n  \r\n  .form-rounded {\r\n    border-radius: 1.6rem;\r\n  }\r\n  .back-card {\r\n    border-radius: 40px !important;\r\n    color: white;\r\n    background: linear-gradient(to bottom right, #707070, #434647);\r\n    text-shadow: 2px 2px 2px #707070;\r\n  }\r\n\r\n  .search-box {\r\n      background-color: rgba(255,255,255, 0.5);\r\n      transition: 0.4s;\r\n  }\r\n\r\n  .card-body {\r\n      z-index: 100 !important;\r\n  }\r\n  \r\n  .city-name {\r\n    position: absolute;\r\n    width: 100%;\r\n  }\r\n  \r\n  .city-name p {\r\n    font-weight: 400;\r\n    font-size: 16pt;\r\n  }\r\n  \r\n  .city-name span {\r\n    position: relative;\r\n    top: -50px;\r\n    font-size: 40pt;\r\n    font-family: \"Times New Roman\", Times, serif;\r\n  }\r\n  \r\n  .temp span {\r\n    font-weight: 100;\r\n    font-size: 5em;\r\n    letter-spacing: -5px;\r\n    white-space: nowrap;\r\n  }\r\n  .card-mid {\r\n    line-height: 0.5;\r\n  }\r\n  .condition {\r\n    font-size: 1em;\r\n    font-weight: 700;\r\n    line-height: 1em;\r\n    text-transform: capitalize;\r\n  }\r\n  \r\n  .high {\r\n    font-size: 15px;\r\n  }\r\n  \r\n  .low {\r\n    font-size: 15px;\r\n  }\r\n  \r\n  .card-bottom p {\r\n    font-size: 40px;\r\n    font-weight: 100;\r\n    letter-spacing: -3px;\r\n  }\r\n  .card-bottom {\r\n    line-height: 0.5;\r\n  }\r\n  \r\n  .card-bottom span {\r\n    font-size: 12px;\r\n  }\r\n  \r\n  .form-control:focus {\r\n    box-shadow: none;\r\n    border-color: inherit;\r\n  }\r\n\r\n  .text-heading {\r\n      color: white;\r\n      text-shadow: 2px 2px #818181;\r\n  }", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -29786,52 +29785,7 @@ var render = function () {
     { class: _vm.isDay ? "day" : "night", attrs: { id: "main" } },
     [
       _c("div", { staticClass: "gradient-effect" }, [
-        _c("div", { staticClass: "form-section container mt-5" }, [
-          _c("h1", { staticClass: "title text-center text-heading" }, [
-            _vm._v("Weather in"),
-          ]),
-          _vm._v(" "),
-          _c(
-            "form",
-            {
-              staticClass: "search-location",
-              on: {
-                submit: function ($event) {
-                  $event.preventDefault()
-                  return _vm.getWeather.apply(null, arguments)
-                },
-              },
-            },
-            [
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.citySearch,
-                    expression: "citySearch",
-                  },
-                ],
-                staticClass:
-                  "form-control text-muted search-box form-rounded p-3 shadow-sm",
-                attrs: {
-                  type: "text",
-                  placeholder: "What City?",
-                  autocomplete: "off",
-                },
-                domProps: { value: _vm.citySearch },
-                on: {
-                  input: function ($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.citySearch = $event.target.value
-                  },
-                },
-              }),
-            ]
-          ),
-        ]),
+        _vm._m(0),
         _vm._v(" "),
         _vm.cityFound
           ? _c("p", { staticClass: "text-center my-3 text-danger" }, [
@@ -29841,7 +29795,48 @@ var render = function () {
         _vm._v(" "),
         _c("div", { staticClass: "container" }, [
           _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-4 col-sm-4" }, [
+            _c("div", { staticClass: "col-4 col-sm-4 mt-3" }, [
+              _c(
+                "form",
+                {
+                  staticClass: "search-location",
+                  on: {
+                    submit: function ($event) {
+                      $event.preventDefault()
+                      return _vm.getWeather.apply(null, arguments)
+                    },
+                  },
+                },
+                [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.citySearch,
+                        expression: "citySearch",
+                      },
+                    ],
+                    staticClass:
+                      "form-control text-muted search-box form-rounded p-3 shadow-sm",
+                    attrs: {
+                      type: "text",
+                      placeholder: "Enter a city",
+                      autocomplete: "off",
+                    },
+                    domProps: { value: _vm.citySearch },
+                    on: {
+                      input: function ($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.citySearch = $event.target.value
+                      },
+                    },
+                  }),
+                ]
+              ),
+              _vm._v(" "),
               _c(
                 "div",
                 {
@@ -29857,14 +29852,14 @@ var render = function () {
                       : _vm._e(),
                     _vm._v(" "),
                     _vm.snowy
-                      ? _c("div", { attrs: { icon: "snowy" } }, [_vm._m(0)])
+                      ? _c("div", { attrs: { icon: "snowy" } }, [_vm._m(1)])
                       : _vm._e(),
                     _vm._v(" "),
                     _vm.stormy
                       ? _c("div", { attrs: { icon: "stormy" } }, [
                           _c("span", { staticClass: "cloud" }),
                           _vm._v(" "),
-                          _vm._m(1),
+                          _vm._m(2),
                         ])
                       : _vm._e(),
                     _vm._v(" "),
@@ -29981,6 +29976,23 @@ var render = function () {
   )
 }
 var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "form-section container mt-5",
+        staticStyle: { "text-align": "center" },
+      },
+      [
+        _c("h1", { staticClass: "title text-heading" }, [
+          _vm._v("Weather Application"),
+        ]),
+      ]
+    )
+  },
   function () {
     var _vm = this
     var _h = _vm.$createElement
